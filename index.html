@@ -1,76 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" >
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to the Tema Chamber of Commerce. Join us to grow your business, attend community events, and connect with local leaders.">
-  <meta name="author" content="Tema Chamber of Commerce">
-  <meta name="keywords" content="Tema Chamber, Business Networking, Ghana Business, Economic Development, Chamber of Commerce">
-  <title>Tema Chamber of Commerce</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Ebenezer Gasonoo - WDD 231 - Web Frontend Development</title>
+
+  <!-- Fonts and Normalize -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 767px)">
   <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
-  <meta property="og:title" content="Tema Chamber of Commerce">
-  <meta property="og:description" content="Join the Tema Chamber of Commerce to grow your business, attend community events, and connect with local leaders.">
+
+  <!-- Meta Info -->
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="Ebenezer Gasonoo - WDD 230 - Web Frontend Development">
+  <meta name="author" content="Ebenezer Gasonoo">
+  <meta property="og:title" content="Ebenezer Gasonoo - WDD 230 - Web Frontend Development">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ebenezergasono.github.io/wdd230/chamber/">
-  <meta property="og:image" content="https://ebenezergasono.github.io/wdd230/chamber/images/hero-image.jpg">
+  <meta property="og:image" content="https://ebenezergasonoo.github.io/images/ghana-hometown.jpg">
+  <meta property="og:url" content="https://ebenezergasonoo.github.io/">
+  <meta property="og:description" content="Explore my web development journey through WDD 230 - Web Frontend Development.">
+  <meta property="og:locale" content="en_US">
 </head>
+
 <body>
   <header>
-    <h1>Tema Chamber of Commerce</h1>
-    <button id="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
-    <nav id="nav-menu" class="nav-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-      </ul>
-    </nav>
+    <img src="images/profile.webp" alt="Ebenezer Gasonoo" width="75" height="87" loading="lazy">
+    <span>Ebenezer Gasonoo</span>
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
   </header>
 
+  <nav>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-menu">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="https://ebenezergasonoo.github.io/wdd230/chamber">Chamber</a></li>
+      <li><a href="https://ebenezergasonoo.github.io/wdd230/week01/chamber-site-plan.html">Site Plan</a></li>
+      <li><a href="https://ebenezergasonoo.github.io/wdd230/week04/Form-start/index.html">Form</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section id="hero">
-      <img src="images/hero-image.jpg" alt="Tema Chamber of Commerce Community" loading="lazy" />
-    </section>
-
-    <section id="info">
-      <div class="info-box">
-        <h2>Weather</h2>
-        <p><span id="weather-temp"></span> - <span id="weather-desc"></span></p>
-        <div id="forecast"></div>
-      </div>
-      
-    </section>
-
-    <section id="cta">
-      <h2>Join the Chamber of Commerce</h2>
-      <p>Support local business. Elevate your network. Be part of Tema’s business growth.</p>
-      <a href="join.html">Join Now</a>
-    </section>
-
-    <section id="spotlights">
-      <h2>Business Spotlights</h2>
-      <div class="spotlight-grid">
-        <!-- Dynamic spotlight content will be inserted here by JS -->
-      </div>
-    </section>
+    <div class="hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 960px)">
+        <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+        <img src="images/hero-small.webp" alt="Ebenezer Gasonoo - WDD 230 - Web Frontend Development" width="960" height="540" loading="lazy">
+      </picture>
+      <div class="label">Accra Ghana Temple</div>
+    </div>
     
+    <h1>WDD 231: Web Frontend Development</h1>
+    <div class="card-grid">
+      <section class="card">
+        <h2>Learning Activities</h2>
+        <ul></ul> <!-- JS will fill this dynamically -->
+      </section>      
+
+      <section class="card">
+        <h2>Information</h2>
+        <p>Weather: <span id="weather">Loading...</span></p>
+        <p>Number of visits: <span id="visits">0</span></p>
+      </section>
+    </div>
   </main>
-
+  <section class="map">
+    <h2>My City: Tema, Ghana</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15887.5032589004!2d0.0048636!3d5.66928045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdc9f8f1ef1b4db%3A0xd35d6deba8e41a4!2sTema!5e0!3m2!1sen!2sgh!4v1713374145402!5m2!1sen!2sgh"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+  
   <footer>
-    <p>📍 Community House, Industrial Area, Tema</p>
-    <p>📧 Email: info@temachamber.com | ☎️ +233 30 123 4567</p>
-    <p>Developed by Ebenezer Gasonoo</p>
-    <p>WDD 230: Web Frontend Development Project</p>
-    <p>Last Updated: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> Ebenezer Gasonoo, Ghana 🇬🇭</p>
+    <p id="lastModified"></p>
   </footer>
-
-  <script src="scripts/getdates.js"  defer></script>
+  
+  <script src="scripts/getDates.js"></script>
+  <script src="scripts/links.js"></script>
+  
 </body>
 </html>

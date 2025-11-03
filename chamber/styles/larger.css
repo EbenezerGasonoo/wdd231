@@ -1,0 +1,99 @@
+@media screen and (min-width: 768px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #nav-menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #nav-menu ul {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  #nav-menu ul li a {
+    background: none;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+  }
+
+  #nav-menu ul li a:hover {
+    border-bottom: 2px solid #f2c94c;
+    color: #f2c94c;
+  }
+
+  #info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .spotlight-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .spotlight {
+    flex: 1 1 30%;
+  }
+}
+
+/* ====== FORM GRID FOR JOIN PAGE ====== */
+@media screen and (min-width: 768px) {
+  .form-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  form, aside {
+    margin: 0;
+  }
+}
+#members.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#members.list-view {
+  display: block;
+  padding: 1rem;
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.list-view .member-card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+}
+
+.member-card img {
+  width: 80px;
+  height: auto;
+  border-radius: 6px;
+}

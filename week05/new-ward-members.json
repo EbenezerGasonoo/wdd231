@@ -1,0 +1,38 @@
+{
+    "wardMembers": [
+      {
+        "familyName": "Gasonoo",
+        "moveInDate": "2024-10-15",
+        "numberOfPeople": 5,
+        "visitedByBishopric": true,
+        "familyMembers": [
+          {
+            "name": "Ebenezer Gasonoo",
+            "gender": "Male",
+            "birthdate": "1987-05-22"
+          },
+          {
+            "name": "Abena Gasonoo",
+            "gender": "Female",
+            "birthdate": "1989-08-14"
+          },
+          {
+            "name": "Kofi Gasonoo",
+            "gender": "Male",
+            "birthdate": "2012-03-09"
+          },
+          {
+            "name": "Esi Gasonoo",
+            "gender": "Female",
+            "birthdate": "2015-11-27"
+          },
+          {
+            "name": "Yaw Gasonoo",
+            "gender": "Male",
+            "birthdate": "2020-07-02"
+          }
+        ]
+      }
+    ]
+  }
+  

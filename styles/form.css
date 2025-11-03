@@ -1,0 +1,59 @@
+:root {
+    --primary-color: #004b87;
+    --background-color: #f4f4f4;
+    --form-gap: 1rem;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: #333;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+  
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-gap);
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+  }
+  
+  input,
+  button {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #00325f;
+  }
+  

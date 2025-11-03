@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Tema Chamber of Commerce. Join us to grow your business, attend community events, and connect with local leaders.">
+  <meta name="author" content="Tema Chamber of Commerce">
+  <meta name="keywords" content="Tema Chamber, Business Networking, Ghana Business, Economic Development, Chamber of Commerce">
+  <title>Tema Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+  <meta property="og:title" content="Tema Chamber of Commerce">
+  <meta property="og:description" content="Join the Tema Chamber of Commerce to grow your business, attend community events, and connect with local leaders.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ebenezergasono.github.io/wdd230/chamber/">
+  <meta property="og:image" content="https://ebenezergasono.github.io/wdd230/chamber/images/hero-image.jpg">
+</head>
+<body>
+  <header>
+    <h1>Tema Chamber of Commerce</h1>
+    <button id="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <img src="images/hero-image.jpg" alt="Tema Chamber of Commerce Community" loading="lazy" />
+    </section>
+
+    <section id="info">
+      <div class="info-box">
+        <h2>Weather</h2>
+        <p><span id="weather-temp"></span> - <span id="weather-desc"></span></p>
+        <div id="forecast"></div>
+      </div>
+      
+    </section>
+
+    <section id="cta">
+      <h2>Join the Chamber of Commerce</h2>
+      <p>Support local business. Elevate your network. Be part of Tema’s business growth.</p>
+      <a href="join.html">Join Now</a>
+    </section>
+
+    <section id="spotlights">
+      <h2>Business Spotlights</h2>
+      <div class="spotlight-grid">
+        <!-- Dynamic spotlight content will be inserted here by JS -->
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>📍 Community House, Industrial Area, Tema</p>
+    <p>📧 Email: info@temachamber.com | ☎️ +233 30 123 4567</p>
+    <p>Developed by Ebenezer Gasonoo</p>
+    <p>WDD 230: Web Frontend Development Project</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/getDates.js"  defer></script>
+</body>
+</html>

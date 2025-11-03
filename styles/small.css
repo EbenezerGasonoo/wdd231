@@ -1,0 +1,62 @@
+/* Small screen styles for mobile devices */
+/* This file is for small screen devices like phones and small tablets */
+* {
+    box-sizing: border-box;
+}
+
+header {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header img {
+    margin-bottom: 0.5rem;
+}
+
+header span {
+    font-size: 1rem;
+}
+
+#dark-mode-toggle {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+}
+
+nav ul {
+    width: 100%;
+}
+
+nav ul li a {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+}
+
+/* Ensure main content has more breathing room on tiny screens */
+main {
+    padding: 0.75rem;
+}
+
+/* Cards get smaller margins on small devices */
+.card {
+   margin: 0.5rem;
+    
+}
+
+.card h1, .card h2 {
+    font-size: 1.2rem;
+    
+}
+
+.card li {
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+}	
+
+footer {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+}
