@@ -1,0 +1,158 @@
+/* Base styles */
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: left;
+    margin-top: 10px;
+}
+
+header {
+    background-color: #004b87;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #004b87;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    display: none; 
+}
+
+nav ul.visible {
+    display: block; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    float: right;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #004b87;
+    background-color: white;
+    border-radius: 5px;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+
+.hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; 
+}
+
+
+.close {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none; 
+    }
+
+    nav ul.visible {
+        display: block; 
+    }
+}
+
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    margin: 1rem 0;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+figure {
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px; 
+    padding: 10px;
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #004b87; 
+}
+
+footer {
+    background-color: #004b87;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}

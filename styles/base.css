@@ -1,0 +1,240 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --dark-blue-gray: #1F2833;
+    --light-gray: #ffffff;
+    --light-cyan: #66FCF1;
+    --teal: #45A29E;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Outfit", Arial, sans-serif;
+    background-color: var(--dark-blue-gray);
+    color: var(--light-gray);
+}
+
+
+header {
+    background: linear-gradient(90deg, var(--teal), var(--light-cyan));
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--light-gray);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--dark-blue-gray);
+    padding: 15px;
+    border-top: 2px solid var(--light-cyan);
+}
+
+header nav a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--light-cyan);
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav a:focus, footer a:focus {
+    outline: 3px solid var(--light-cyan);
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    padding: 20px;
+    gap: 20px; 
+    align-items: center;
+    justify-items: center;
+}
+
+.card {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 1em;
+    border: 1px solid var(--teal);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h2, .card h3 {
+    text-align: center;
+    color: var(--dark-blue-gray);
+    background-color: var(--light-cyan);
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card p, .card figcaption {
+    color: var(--dark-blue-gray);
+    line-height: 1.8;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 20px;
+    background-color: var(--dark-blue-gray);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.about-me img, .flag-image {
+    max-width: 150px;
+    height: auto;
+}
+
+.about-me p {
+    color: var(--light-gray);
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+.card3 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--teal);
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.card3 > h3 {
+    font-size: 1.5rem;
+    color: var(--dark-blue-gray);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card3 p {
+    color: var(--dark-blue-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+
+.flag-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.flag-container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: var(--dark-blue-gray);
+    margin-top: 5px;
+}
+
+
+footer {
+    background-color: var(--teal);
+    color: var(--light-gray);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+footer .lastmodifiedcolor {
+    color: var(--light-cyan);
+}
+
+[contenteditable="true"]:focus {
+    outline: 2px dashed var(--light-cyan);
+    background-color: rgba(102, 252, 241, 0.1);
+}
+
+
+img {
+    border: 3px solid var(--light-cyan);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        margin: 2% 0;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 10px;
+    }
+}
+
+

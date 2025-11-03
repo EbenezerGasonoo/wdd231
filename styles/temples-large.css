@@ -1,0 +1,20 @@
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row; 
+        justify-content:right;
+        background-color: transparent; 
+    }
+
+    #hamburger {
+        display: none; 
+    }
+
+    .hidden {
+        display: flex; 
+    }
+
+    .album-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}

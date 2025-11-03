@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Ebenezer Gasonoo</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Ebenezer Gasonoo. Exploring web development fundamentals with dynamic and engaging projects.">
+    <meta name="author" content="Ebenezer Gasonoo">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Ebenezer Gasonoo</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/ebenezer-gasonoo" target="_blank" title="Visit My LinkedIn">My LinkedIn</a>
+            <a href="https://byui.instructure.com/" target="_blank" title="Visit I-Learn">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" title="Read Scriptures">Scripture</a>
+            <a href="#" target="_blank" title="View Final Project">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <section class="about-me">
+            <h2>About Me</h2>
+            <img src="images/profile.jpg" alt="Photo of Ebenezer Gasonoo">
+            <p>
+                My name is Ebenezer Gasonoo. I come from Ghana, specifically Tema, which is known as the center of the world and the gateway to Africa. 
+                Ghana is famous for its high-quality chocolate. I enjoy learning and experimenting with new ideas, especially in cinematography, where I tell compelling stories.
+            </p>
+        </section>
+        <section class="card card2">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to/" target="_blank" title="Visit Dev.to Community">Dev.to Community</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank" title="Learn CSS Tricks">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank" title="Visit W3Schools">W3Schools</a></li>
+                <li><a href="https://unsplash.com/" target="_blank" title="Explore Free Images on Unsplash">Unsplash</a></li>
+                <li><a href="https://squoosh.app/" target="_blank" title="Optimize Images with Squoosh">Squoosh</a></li>
+                <li><a href="https://cssgradient.io/" target="_blank" title="Create Gradients with CSS Gradient">CSS Gradient</a></li>
+                <li><a href="https://web-dev-resources.com/" target="_blank" title="Explore Web Dev Resources">Web Dev Resources</a></li>
+            </ul>
+        </section>
+        <section class="card card3">
+            <h3>Ghana, Tema</h3>
+            <figure class="flag">
+                <img src="images/ghana-flag.jpg" alt="Flag of Ghana">
+                <figcaption>Ghana's National Flag</figcaption>
+            </figure>
+            <p>
+                Tema, known as the center of the world, is a beautiful coastal city in Ghana. It's rich in culture, history, and renowned for its hospitality.
+            </p>
+        </section>      
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> 🤓 Ebenezer Gasonoo 🤓, Tema, Ghana</p>
+        <p>Last Modified: <span id="lastModified"></span> </p>
+    </footer>
+    <script src="scripts/getdates.js" defer></script>
 </body>
 </html>

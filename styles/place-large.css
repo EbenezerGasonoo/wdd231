@@ -1,0 +1,76 @@
+@media (min-width: 800px) {
+    main {
+        position: relative;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem; 
+    }
+
+    picture {
+        position: relative;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+        border-radius: 8px; 
+    }
+
+    .weather h2::after {
+        content: " ⛅"; 
+        font-size: 1.2rem;
+        margin-left: 0.5rem; 
+    }
+    
+    #svg {
+        display: none;
+    }
+
+    .data {
+        position: absolute;
+        width: 35%;
+        top: 0.5rem;
+        left: 1.5rem;
+        background-color: var(--background-color); 
+        border-radius: 6px;
+        padding: 1rem; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    .weather {
+        position: absolute;
+        width: 25%;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        background-color: var(--background-color); 
+        border-radius: 8px;
+        padding: 1rem; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    h2 {
+        position: relative;
+        width: calc(100% + 3rem); 
+        padding: 1rem;
+        background: var(--primary-color);
+        color: white; 
+        left: -1.5rem; 
+        text-align: left;
+        border-radius: 8px;
+        margin-bottom: 0.5rem; 
+    }
+
+    footer {
+        margin-top: -10px;
+        padding: 1rem;
+        background-color: var(--secondary-color);
+        color: white;
+        text-align: center;
+        font-size: 0.9rem;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+    }
+}
