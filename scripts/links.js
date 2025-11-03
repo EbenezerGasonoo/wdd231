@@ -12,7 +12,9 @@ async function getLinks() {
 }
 
 function displayLinks(weeks) {
-  const learningList = document.querySelector(".card ul");
+  const learningList = document.querySelector("#activities-list");
+
+  if (!learningList) return; // Exit if element doesn't exist
 
   weeks.forEach((weekObj) => {
     const listItem = document.createElement("li");
