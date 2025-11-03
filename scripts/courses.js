@@ -63,7 +63,7 @@ const courses = [
 ];
 
 // Get DOM elements
-const coursesContainer = document.querySelector('#courses');
+const coursesContainer = document.querySelector('.course-grid');
 const allButton = document.querySelector('#all');
 const cseButton = document.querySelector('#cse');
 const wddButton = document.querySelector('#wdd');
