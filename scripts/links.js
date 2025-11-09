@@ -1,5 +1,5 @@
-const baseURL = "https://ebenezergasonoo.github.io/wdd230/";
-const linksURL = "https://ebenezergasonoo.github.io/wdd230/data/links.json";
+const baseURL = "https://ebenezergasonoo.github.io/wdd231/";
+const linksURL = "https://ebenezergasonoo.github.io/wdd231/data/links.json";
 
 async function getLinks() {
   try {
