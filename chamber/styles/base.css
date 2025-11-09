@@ -21,7 +21,7 @@ header {
   gap: 1rem;
   padding: 1.25rem 1.5rem;
   background-color: #004b87;
-  color: white;
+  color: #ffffff;
   position: relative;
 }
 
@@ -75,7 +75,7 @@ header {
 
 .nav-menu a {
   display: block;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   padding: 0.75rem 1.25rem;
@@ -169,7 +169,7 @@ main {
 
 .view-toggle button {
   background-color: #004b87;
-  color: white;
+  color: #ffffff;
   border: 2px solid #004b87;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -402,7 +402,7 @@ img.loaded {
   display: inline-block;
   margin-top: 1rem;
   background-color: #004b87;
-  color: white;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
@@ -583,7 +583,7 @@ main.dark-mode .hero .label {
 /* ====== FOOTER ====== */
 footer {
   background-color: #004b87;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
@@ -614,7 +614,7 @@ footer p {
   display: inline-block;
   margin-top: 1rem;
   background-color: #004b87;
-  color: white;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
@@ -668,7 +668,7 @@ form textarea {
 
 form input[type="submit"] {
   background-color: #004b87;
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.75rem;
