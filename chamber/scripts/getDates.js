@@ -31,40 +31,128 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (membersContainer && gridBtn && listBtn) {
     async function getMembers() {
-      const response = await fetch('data/members.json');
-      const data = await response.json();
-      displayMembers(data.members);
+      try {
+        const response = await fetch('data/members.json');
+        if (!response.ok) {
+          throw new Error(`Directory request failed: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (!data || !Array.isArray(data.members)) {
+          throw new Error('Directory data is not formatted correctly.');
+        }
+
+        displayMembers(data.members);
+      } catch (error) {
+        console.error('Member directory error:', error);
+        membersContainer.innerHTML = `
+          <p class="directory-error" role="alert">
+            We’re having trouble loading the member directory. Please refresh the page or try again shortly.
+          </p>
+        `;
+      }
     }
 
     function displayMembers(members) {
       membersContainer.innerHTML = '';
-      members.forEach(member => {
-        const card = document.createElement('div');
-        card.classList.add('member-card');
+      membersContainer.setAttribute('role', 'list');
 
-        card.innerHTML = `
-          <img src="images/${member.image}" alt="${member.name} Logo">
-          <h3>${member.name}</h3>
-          <p>${member.address}</p>
-          <p>${member.phone}</p>
-          <a href="${member.website}" target="_blank">Visit Website</a>
-          <p class="level">${member.membership} Member</p>
-        `;
+      const sortedMembers = [...members].sort((a, b) =>
+        a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+      );
+
+      sortedMembers.forEach(member => {
+        const {
+          name,
+          address,
+          phone,
+          website,
+          image,
+          membership,
+          industry
+        } = member;
+
+        const memberLevel = membership || 'Member';
+
+        const card = document.createElement('article');
+        card.classList.add('member-card');
+        card.setAttribute('role', 'listitem');
+        card.dataset.membership = memberLevel.toLowerCase();
+
+        const logo = document.createElement('img');
+        const imagePath = image && image.startsWith('http')
+          ? image
+          : `images/${image}`;
+        logo.src = imagePath;
+        logo.alt = `${name} logo`;
+        logo.width = 120;
+        logo.height = 120;
+        logo.loading = 'lazy';
+        logo.decoding = 'async';
+        logo.referrerPolicy = 'no-referrer';
+        logo.onerror = () => {
+          logo.remove();
+        };
+
+        const memberName = document.createElement('h3');
+        memberName.textContent = name;
+
+        const addressLine = document.createElement('p');
+        addressLine.classList.add('address');
+        addressLine.textContent = address;
+
+        const phoneLine = document.createElement('p');
+        phoneLine.classList.add('phone');
+        phoneLine.textContent = phone;
+
+        const websiteLink = document.createElement('a');
+        websiteLink.classList.add('website-link');
+        const safeWebsite = website && website.startsWith('http')
+          ? website
+          : `https://${website}`;
+        websiteLink.href = safeWebsite;
+        websiteLink.target = '_blank';
+        websiteLink.rel = 'noopener';
+        websiteLink.textContent = 'Visit Website';
+        websiteLink.setAttribute('aria-label', `Visit ${name} website`);
+
+        const level = document.createElement('p');
+        level.classList.add('level');
+        level.textContent = `${memberLevel} Member`;
+
+        card.append(logo, memberName);
+
+        if (industry) {
+          const industryLine = document.createElement('p');
+          industryLine.classList.add('industry');
+          industryLine.textContent = industry;
+          card.append(industryLine);
+        }
+
+        card.append(addressLine, phoneLine, websiteLink, level);
 
         membersContainer.appendChild(card);
       });
     }
 
-    gridBtn.addEventListener('click', () => {
-      membersContainer.classList.add('grid-view');
-      membersContainer.classList.remove('list-view');
-    });
+    const setView = view => {
+      const isGrid = view === 'grid';
 
-    listBtn.addEventListener('click', () => {
-      membersContainer.classList.add('list-view');
-      membersContainer.classList.remove('grid-view');
-    });
+      membersContainer.classList.toggle('grid-view', isGrid);
+      membersContainer.classList.toggle('list-view', !isGrid);
+      membersContainer.dataset.view = view;
 
+      gridBtn.classList.toggle('active', isGrid);
+      listBtn.classList.toggle('active', !isGrid);
+
+      gridBtn.setAttribute('aria-pressed', String(isGrid));
+      listBtn.setAttribute('aria-pressed', String(!isGrid));
+    };
+
+    gridBtn.addEventListener('click', () => setView('grid'));
+    listBtn.addEventListener('click', () => setView('list'));
+
+    setView('grid');
     getMembers();
   }
 

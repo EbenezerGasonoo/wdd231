@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title>Alpha Foods Ghana logo</title>
+  <rect width="120" height="120" rx="18" fill="#f2c94c"/>
+  <g transform="translate(18 18)">
+    <path d="M42 0l42 84H0z" fill="#004b87" opacity="0.12"/>
+    <path d="M42 12l30 60H12z" fill="#ffffff" opacity="0.18"/>
+    <circle cx="42" cy="42" r="28" fill="#27ae60"/>
+    <path d="M42 20c8 4 12 16 12 22 0 8-4 18-12 22-8-4-12-14-12-22 0-6 4-18 12-22z" fill="#f7f9f2"/>
+    <text x="42" y="48" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="18" font-weight="700" fill="#004b87">AF</text>
+  </g>
+</svg>
+

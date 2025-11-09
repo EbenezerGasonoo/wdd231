@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="Utf-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Directory for Tema Chamber of Commerce members. Explore local businesses and services in Tema.">
   <meta name="author" content="Tema Chamber of Commerce">
@@ -22,24 +22,31 @@
 </head>
 <body>
   <header>
-    <h1>Directory - Tema Chamber of Commerce</h1>
-    <button id="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
-    <nav id="nav-menu" class="nav-menu">
+    <div class="brand">
+      <h1>Tema Chamber of Commerce</h1>
+      <p class="tagline">Supporting businesses across the Tema metropolitan area.</p>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="directory">
+    <section class="directory" aria-labelledby="directory-heading">
       <div class="directory-header">
-        <div class="view-toggle">
-          <button id="grid-btn" aria-label="Show Grid View" title="Grid View">Grid View</button>
-          <button id="list-btn" aria-label="Show List View" title="List View">List View</button>
+        <div class="directory-copy">
+          <h2 id="directory-heading">Member Directory</h2>
+          <p>Browse businesses that power Tema’s growth. Toggle the view to explore in the way that works best for you.</p>
+        </div>
+        <div class="view-toggle" role="group" aria-label="Directory view toggle">
+          <button type="button" id="grid-btn" aria-label="Show grid view" title="Grid view">Grid View</button>
+          <button type="button" id="list-btn" aria-label="Show list view" title="List view">List View</button>
         </div>
       </div>
   
@@ -53,7 +60,7 @@
     <p>📍 Community House, Industrial Area, Tema</p>
     <p>📧 Email: info@temachamber.com | ☎️ +233 30 123 4567</p>
     <p>Developed by Ebenezer Gasonoo</p>
-    <p>WDD 230: Web Frontend Development Project</p>
+    <p>WDD 231: Web Frontend Development Project</p>
     <p>Last Updated: <span id="lastModified"></span></p>
   </footer>
 

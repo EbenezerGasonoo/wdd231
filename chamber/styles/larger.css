@@ -65,35 +65,195 @@
     margin: 0;
   }
 }
+/* ====== DIRECTORY LAYOUT ====== */
+.directory-header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.directory-copy {
+  max-width: 60%;
+}
+
+.view-toggle {
+  flex-direction: row;
+  width: auto;
+}
+
+.view-toggle button {
+  min-width: 9rem;
+}
+
+/* ====== GRID VIEW ====== */
 #members.grid-view {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1rem;
 }
 
-#members.list-view {
-  display: block;
-  padding: 1rem;
-}
-
-.member-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
+#members.grid-view .member-card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
   background: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#members.grid-view .member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#members.grid-view .member-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #004b87;
+}
+
+#members.grid-view .member-card h3 {
+  color: #004b87;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+#members.grid-view .member-card p {
+  margin: 0.3rem 0;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+#members.grid-view .member-card a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #006bb3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#members.grid-view .member-card a:hover {
+  background-color: #004b87;
+}
+
+#members.grid-view .member-card .level {
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #f2c94c;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* ====== LIST VIEW (WITHOUT IMAGES) ====== */
+#members.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#members.list-view .member-card {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.25fr 1fr;
+  grid-template-areas:
+    "name address phone website"
+    "industry address phone level";
+  align-items: flex-start;
+  gap: 0.75rem 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-left: 4px solid #004b87;
+  background: #f9f9f9;
+  border-radius: 5px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+#members.list-view .member-card h3 {
+  grid-area: name;
+  color: #004b87;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+#members.list-view .member-card .industry {
+  grid-area: industry;
+  margin-top: -0.25rem;
+}
+
+#members.list-view .member-card .address {
+  grid-area: address;
+}
+
+#members.list-view .member-card .phone {
+  grid-area: phone;
+}
+
+#members.list-view .member-card .website-link {
+  grid-area: website;
+  color: #006bb3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#members.list-view .member-card .website-link:hover,
+#members.list-view .member-card .website-link:focus-visible {
+  text-decoration: underline;
+}
+
+#members.list-view .member-card .level {
+  grid-area: level;
+  padding: 0.3rem 0.6rem;
+  background-color: #f2c94c;
+  color: #333;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 0.85rem;
   text-align: center;
 }
 
-.list-view .member-card {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  gap: 1rem;
+#members.list-view .member-card:hover {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.member-card img {
-  width: 80px;
-  height: auto;
-  border-radius: 6px;
+/* Hide images in list view per requirements */
+#members.list-view .member-card img {
+  display: none;
+}
+
+#members.list-view .member-card p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Mobile responsive for list view */
+@media screen and (max-width: 768px) {
+  #members.list-view .member-card {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .view-toggle {
+    flex-direction: column;
+  }
+  
+  .view-toggle button {
+    width: 100%;
+  }
 }
