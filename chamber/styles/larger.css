@@ -65,27 +65,6 @@
     margin: 0;
   }
 }
-/* ====== DIRECTORY LAYOUT ====== */
-.directory-header {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 0;
-}
-
-.directory-copy {
-  max-width: 60%;
-}
-
-.view-toggle {
-  flex-direction: row;
-  width: auto;
-}
-
-.view-toggle button {
-  min-width: 9rem;
-}
-
 /* ====== GRID VIEW ====== */
 #members.grid-view {
   display: grid;

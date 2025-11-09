@@ -216,6 +216,28 @@ main {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .directory-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+
+  .directory-copy {
+    max-width: 60%;
+  }
+
+  .view-toggle {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .view-toggle button {
+    min-width: 9rem;
+  }
+}
+
 /* ====== HERO SECTION ====== */
 #hero img,
 .hero picture img {
