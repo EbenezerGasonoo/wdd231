@@ -386,13 +386,73 @@ footer p {
   margin: 0.5rem 0;
 }
 
+.nav-menu.show {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header img {
+    margin-bottom: 0.5rem;
+  }
+
+  header span {
+    font-size: 1rem;
+  }
+
+  #dark-mode-toggle {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 0.75rem;
+  }
+
+  .card {
+    margin: 0.5rem;
+  }
+
+  .card h1,
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card li {
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .course-card {
+    margin: 0 0 1rem 0;
+  }
+}
+
 #year,
 #lastModified {
   display: inline-block;
-}
-
-.nav-menu.show {
-  display: flex;
 }
 
 /* === Dark Mode (main only) === */
