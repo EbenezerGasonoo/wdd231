@@ -62,6 +62,7 @@ header span {
 
 nav {
   background-color: var(--secondary-color);
+  color: var(--white);
 }
 
 nav ul {
@@ -84,11 +85,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-menu li.active a {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   font-weight: bold;
   border-left: 4px solid var(--white);
 }
