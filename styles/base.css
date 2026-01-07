@@ -15,7 +15,7 @@ header {
   justify-content: space-between;
   padding: 1rem;
   background-color: #004b87;
-  color: white;
+  color: #ffffff;
 }
 
 header img {
@@ -31,7 +31,7 @@ header span {
 #dark-mode-toggle {
   background-color: transparent;
   border: none;
-  color: white;
+  color: #ffffff;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -55,7 +55,7 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 1rem;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -66,13 +66,13 @@ nav ul li a:hover {
 .nav-menu li.active a {
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
-  border-left: 4px solid white;
+  border-left: 4px solid #ffffff;
 }
 
 #menu-toggle {
   background: none;
   border: none;
-  color: white;
+  color: #ffffff;
   font-size: 2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -102,7 +102,7 @@ nav ul li a:hover {
 
 .filter-btn {
   background-color: #006bb3;
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -210,7 +210,7 @@ nav ul li a:hover {
   top: 10px;
   right: 10px;
   background-color: #28a745;
-  color: white;
+  color: #ffffff;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -273,7 +273,7 @@ nav ul li a:hover {
 
   .nav-menu li.active a {
     border-left: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #ffffff;
   }
 }
 
@@ -355,7 +355,7 @@ h1, h2 {
 
 footer {
   background-color: #004b87;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 1.5rem 1rem;
 }
