@@ -1,0 +1,37 @@
+@media screen and (min-width: 768px) {
+
+    /* === Navigation Menu (Horizontal for Large Screens) === */
+    #menu-toggle {
+      display: none;
+    }
+  
+    .nav-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .nav-menu li {
+      margin: 0;
+    }
+  
+    .nav-menu a {
+      padding: 10px 20px;
+    }
+  
+    /* === Card Grid Layout (Responsive) === */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Equal width columns */
+      gap: 1.5rem;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+        .hero picture img {
+          height: 400px;
+        }
+      }
+      
+  }
+  

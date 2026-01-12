@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Become a Tema Chamber member to gain mentoring, spotlights, and events designed to accelerate your business growth across the metropolitan area.">
+  <meta name="author" content="Ebenezer Gasonoo">
+  <meta name="keywords"
+    content="Tema Chamber, Business Networking, Ghana Business, Economic Development, Chamber of Commerce">
+  <title>Tema Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+  <meta property="og:title" content="Tema Chamber of Commerce">
+  <meta property="og:description"
+    content="Become a Tema Chamber member to gain mentoring, spotlights, and events designed to accelerate your business growth across the metropolitan area.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ebenezergasonoo.github.io/wdd231/chamber/join.html">
+  <meta property="og:image" content="https://ebenezergasonoo.github.io/wdd231/chamber/join-og.jpg">
+</head>
+
+<body>
+  <header>
+    <h1>Tema Chamber of Commerce</h1>
+    <button id="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-grid">
+    <section>
+      <h2>Join the Chamber</h2>
+      <form method="get" action="thankyou.html">
+        <label>First Name:
+          <input type="text" name="firstName" id="firstName" required>
+        </label>
+
+        <label>Last Name:
+          <input type="text" name="lastName" id="lastName" required>
+        </label>
+
+        <label>Title/Position:
+          <input type="text" name="position" id="position" pattern="[A-Za-z\s-]{7,}"
+            title="Minimum 7 alphabetic characters, hyphens, or spaces">
+        </label>
+
+        <label>Email:
+          <input type="email" name="email" id="email" required placeholder="example@email.com">
+        </label>
+
+        <label>Mobile Phone:
+          <input type="tel" name="phone" id="phone" required>
+        </label>
+
+        <label>Organization Name:
+          <input type="text" name="orgName" id="orgName" required>
+        </label>
+
+        <label>Membership Level:
+          <select name="membership" id="membership">
+            <option value="np">NP Membership (Free)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label>Description:
+          <textarea name="description" id="description"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <input type="submit" value="Join Our Chamber">
+      </form>
+    </section>
+
+    <aside>
+      <h3>Membership Benefits</h3>
+      <ul>
+        <li><strong>NP Membership:</strong> Free listing and access to basic events.</li>
+        <li><strong>Bronze:</strong> Event invitations, training access.</li>
+        <li><strong>Silver:</strong> Spotlight features, discounts, training.</li>
+        <li><strong>Gold:</strong> Premium advertising, VIP events, all benefits.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>📍 Community House, Industrial Area, Tema</p>
+    <p>📧 Email: info@temachamber.com | ☎️ +233 30 123 4567</p>
+    <p>&copy; <span id="year"></span> Tema Chamber</p>
+    <p>Developed by Ebenezer Gasonoo</p>
+    <p>WDD 230: Web Frontend Development Project</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/getdates.js" defer></script>
+</body>
+
+</html>

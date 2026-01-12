@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Browse verified Tema Chamber members, compare services, and connect with partners ready to support your next business project.">
+  <meta name="author" content="Ebenezer Gasonoo">
+  <meta name="keywords"
+    content="Tema Chamber, Business Networking, Ghana Business, Economic Development, Chamber of Commerce">
+  <title>Directory | Tema Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+  <meta property="og:title" content="Directory | Tema Chamber of Commerce">
+  <meta property="og:description"
+    content="Browse verified Tema Chamber members, compare services, and connect with partners ready to support your next business project.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ebenezergasonoo.github.io/wdd231/chamber/directory.html">
+  <meta property="og:image" content="https://ebenezergasonoo.github.io/wdd231/chamber/directory-og.jpg">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <p class="brand-title">Tema Chamber of Commerce</p>
+      <p class="tagline">Supporting businesses across the Tema metropolitan area.</p>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="directory" aria-labelledby="directory-heading">
+      <div class="directory-header">
+        <div class="directory-copy">
+          <h1 id="directory-heading">Directory</h1>
+          <p>Browse businesses that power Tema's growth. Toggle the view to explore in the way that works best for you.
+          </p>
+        </div>
+        <div class="view-toggle" role="group" aria-label="Directory view toggle">
+          <button type="button" id="grid-btn" aria-label="Show grid view" title="Grid view">Grid View</button>
+          <button type="button" id="list-btn" aria-label="Show list view" title="List view">List View</button>
+        </div>
+      </div>
+
+      <div id="members" class="members grid-view" aria-live="polite">
+        <!-- Member cards will be injected here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>📍 Community House, Industrial Area, Tema</p>
+    <p>📧 Email: info@temachamber.com | ☎️ +233 30 123 4567</p>
+    <p>&copy; <span id="year"></span> Tema Chamber</p>
+    <p>Developed by Ebenezer Gasonoo</p>
+    <p>WDD 231: Web Frontend Development Project</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/getdates.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,568 @@
+/* base.css */
+:root {
+  --primary-color: #004b87;
+  --secondary-color: #006bb3;
+  --text-color: #333;
+  --white: #ffffff;
+  --bg-color: #ffffff;
+  --bg-light: #f4f4f4;
+  --border-color: #ccc;
+
+  /* Dark Mode */
+  --dm-bg-color: #1a1a1a;
+  --dm-text-color: #f0f0f0;
+  --dm-accent: #ffd700;
+  --dm-card-bg: #2c2c2c;
+  --dm-border: #444;
+  --dm-success-bg: #1a3d1a;
+  --dm-success-text: #4caf50;
+
+  /* Status */
+  --success-color: #28a745;
+  --success-bg: #d4edda;
+  --success-text: #155724;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+header img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+header span {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+#dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+nav {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+}
+
+nav ul li {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a {
+  display: block;
+  padding: 1rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu li.active a {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  border-left: 4px solid var(--white);
+}
+
+#menu-toggle {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: block;
+}
+
+/* === Course Filters Section === */
+.filters {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--bg-light);
+  border-radius: 10px;
+}
+
+.filters h2 {
+  margin-bottom: 1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.credits-display {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
+
+.credits-display span {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+}
+
+/* === Courses Section === */
+#courses-section {
+  margin: 2rem 0;
+}
+
+#courses-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+/* === Course Grid === */
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* === Course Cards === */
+.course-card {
+  background-color: var(--bg-light);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.course-card p {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+.course-card .credits {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* === Completed Course Styling === */
+.course-card.completed {
+  background-color: var(--success-bg);
+  border-color: var(--success-color);
+  position: relative;
+}
+
+.course-card.completed::after {
+  content: "✓";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--success-color);
+  color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.course-card.completed h3 {
+  color: var(--success-text);
+}
+
+/* === Learning Activities Section === */
+.learning-activities {
+  background-color: var(--bg-light);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+}
+
+.learning-activities h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.learning-activities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.learning-activities li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.learning-activities a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.learning-activities a:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-menu li.active a {
+    border-left: none;
+    border-bottom: 2px solid var(--white);
+  }
+}
+
+main {
+  padding: 1rem;
+}
+
+main picture img {
+  width: 100%;
+  height: auto;
+}
+
+/* === Hero Section === */
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+
+@media (min-width: 768px) {
+  .hero picture img {
+    height: 400px;
+  }
+}
+
+.hero .label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1rem;
+  max-width: 90%;
+  /* prevent overflow */
+}
+
+
+@media (min-width: 768px) {
+  .hero .label {
+    font-size: 1.25rem;
+    top: 1.5rem;
+    left: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+}
+
+h1,
+h2 {
+  color: var(--primary-color);
+}
+
+.card {
+  background-color: var(--bg-light);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card ul {
+  padding-left: 1rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.social-links svg {
+  width: 32px;
+  height: 32px;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+.nav-menu.show {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header img {
+    margin-bottom: 0.5rem;
+  }
+
+  header span {
+    font-size: 1rem;
+  }
+
+  #dark-mode-toggle {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 0.75rem;
+  }
+
+  .card {
+    margin: 0.5rem;
+  }
+
+  .card h1,
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card li {
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .course-card {
+    margin: 0 0 1rem 0;
+  }
+}
+
+#year,
+#lastModified {
+  display: inline-block;
+}
+
+/* === Dark Mode (main only) === */
+main.dark-mode {
+  background-color: var(--dm-bg-color);
+  color: var(--dm-text-color);
+}
+
+main.dark-mode a {
+  color: var(--dm-accent);
+}
+
+main.dark-mode .card {
+  background-color: var(--dm-card-bg);
+  border: 1px solid var(--dm-border);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+main.dark-mode h1,
+main.dark-mode h2 {
+  color: var(--dm-accent);
+}
+
+main.dark-mode .hero .label {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+
+main.dark-mode .filters,
+main.dark-mode .learning-activities {
+  background-color: var(--dm-card-bg);
+  border: 1px solid var(--dm-border);
+}
+
+main.dark-mode #courses-section h2 {
+  color: var(--dm-accent);
+}
+
+main.dark-mode .course-card {
+  background-color: var(--dm-card-bg);
+  border-color: var(--dm-border);
+  color: var(--dm-text-color);
+}
+
+main.dark-mode .course-card h3 {
+  color: var(--dm-accent);
+}
+
+main.dark-mode .course-card.completed {
+  background-color: var(--dm-success-bg);
+  border-color: var(--success-color);
+}
+
+main.dark-mode .course-card.completed h3 {
+  color: var(--dm-success-text);
+}
+
+.map {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.map h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.map-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

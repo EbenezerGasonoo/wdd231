@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Tropic Ventures Ltd.",
+      "address": "123 Palm Street, Tema",
+      "phone": "+233 24 123 4567",
+      "website": "https://tropicventures.com",
+      "image": "members/tropic-ventures.svg",
+      "membership": "Gold",
+      "industry": "Export & Logistics"
+    },
+    {
+      "name": "Tema Printing Press",
+      "address": "456 Ink Road, Tema",
+      "phone": "+233 20 765 4321",
+      "website": "https://temaprint.com",
+      "image": "members/tema-printing.svg",
+      "membership": "Silver",
+      "industry": "Commercial Printing"
+    },
+    {
+      "name": "Alpha Foods Ghana",
+      "address": "7 Mango Ave, Tema",
+      "phone": "+233 55 987 6543",
+      "website": "https://alphafoodsgh.com",
+      "image": "members/alpha-foods.svg",
+      "membership": "Bronze",
+      "industry": "Food Processing"
+    },
+    {
+      "name": "Evergreen Organic Market",
+      "address": "88 Greenfield Rd, Tema",
+      "phone": "+233 54 321 0987",
+      "website": "https://evergreenmarket.com",
+      "image": "members/evergreen-organic.svg",
+      "membership": "Silver",
+      "industry": "Retail Grocery"
+    },
+    {
+      "name": "Coastal Tech Solutions",
+      "address": "12 Coastal Loop, Community 6, Tema",
+      "phone": "+233 26 456 7890",
+      "website": "https://coastaltechgh.com",
+      "image": "members/coastal-tech.svg",
+      "membership": "Gold",
+      "industry": "IT Services"
+    },
+    {
+      "name": "Tema Builders & Co.",
+      "address": "75 Brickstone Way, Tema Industrial Area",
+      "phone": "+233 30 998 1122",
+      "website": "https://temabuilders.com",
+      "image": "members/tema-builders.svg",
+      "membership": "Gold",
+      "industry": "Construction"
+    },
+    {
+      "name": "Royal Breeze Hotel",
+      "address": "Beachfront Blvd, Community 1, Tema",
+      "phone": "+233 50 111 2244",
+      "website": "https://royalbreezehotel.com",
+      "image": "members/royal-breeze.svg",
+      "membership": "Bronze",
+      "industry": "Hospitality"
+    }
+  ]
+}

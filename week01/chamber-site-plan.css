@@ -1,0 +1,161 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #004b87;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f2c94c;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h1, h2 {
+  color: #004b87;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #f2c94c;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: #006bb3;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 2rem;
+  line-height: 1.8;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* User Personas Styling */
+.persona {
+  background-color: #f4f4f4;
+  border-left: 4px solid #f2c94c;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.persona h3 {
+  margin-top: 0;
+  color: #004b87;
+}
+
+.persona p {
+  margin-bottom: 0;
+}
+
+/* Design Brief Styling */
+.design-brief {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.design-brief h3 {
+  margin-top: 1rem;
+  color: #004b87;
+}
+
+.design-brief h3:first-child {
+  margin-top: 0;
+}
+
+/* Site Map Styling */
+.sitemap {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #006bb3;
+}
+
+.sitemap p {
+  margin-bottom: 0.5rem;
+}
+
+.sitemap ul {
+  margin-top: 0.5rem;
+}
+
+/* Wireframe Images */
+.wireframe {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  border: 2px dashed #004b87;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #004b87;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .persona, .design-brief, .sitemap {
+    padding: 1rem;
+  }
+}
+  

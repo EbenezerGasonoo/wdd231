@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Tropic Ventures Ltd.",
+      "address": "123 Palm Street, Tema",
+      "phone": "+233 24 123 4567",
+      "website": "https://tropicventures.com",
+      "image": "tropic_ventures_ltd.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "Tema Printing Press",
+      "address": "456 Ink Road, Tema",
+      "phone": "+233 20 765 4321",
+      "website": "https://temaprint.com",
+      "image": "tema_printing_press.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "Alpha Foods Ghana",
+      "address": "7 Mango Ave, Tema",
+      "phone": "+233 55 987 6543",
+      "website": "https://alphafoodsgh.com",
+      "image": "alpha_foods_ghana.png",
+      "membership": "Bronze"
+    },
+    {
+      "name": "Evergreen Organic Market",
+      "address": "88 Greenfield Rd, Tema",
+      "phone": "+233 54 321 0987",
+      "website": "https://evergreenmarket.com",
+      "image": "evergreen_organic_market.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "Coastal Tech Solutions",
+      "address": "12 Coastal Loop, Community 6, Tema",
+      "phone": "+233 26 456 7890",
+      "website": "https://coastaltechgh.com",
+      "image": "coastal_tech_solutions.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "Tema Builders & Co.",
+      "address": "75 Brickstone Way, Tema Industrial Area",
+      "phone": "+233 30 998 1122",
+      "website": "https://temabuilders.com",
+      "image": "tema_builders_and_co.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "Royal Breeze Hotel",
+      "address": "Beachfront Blvd, Community 1, Tema",
+      "phone": "+233 50 111 2244",
+      "website": "https://royalbreezehotel.com",
+      "image": "royal_breeze_hotel.png",
+      "membership": "Bronze"
+    }
+  ]
+}

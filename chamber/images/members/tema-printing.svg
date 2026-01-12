@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title>Tema Printing Press logo</title>
+  <rect width="120" height="120" rx="14" fill="#ffffff" stroke="#004b87" stroke-width="6"/>
+  <g transform="translate(20 22)">
+    <rect x="0" y="16" width="80" height="44" rx="10" fill="#004b87"/>
+    <rect x="8" y="32" width="64" height="28" rx="6" fill="#f2c94c"/>
+    <circle cx="40" cy="46" r="16" fill="#ffffff"/>
+    <text x="40" y="52" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="16" font-weight="700" fill="#004b87">TP</text>
+    <rect x="14" y="0" width="52" height="10" rx="5" fill="#006bb3"/>
+    <rect x="14" y="70" width="52" height="10" rx="5" fill="#006bb3"/>
+  </g>
+</svg>
+

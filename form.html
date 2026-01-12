@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Page - WDD 230</title>
+
+  <!-- Fonts & Normalize -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/form.css" />
+  <meta name="description" content="Ebenezer Gasonoo - WDD 230 - Web Frontend Development form building exercise" />
+  <meta name="keywords" content="WDD 230, Web Development, Form, HTML, CSS" />
+  <meta name="author" content="Ebenezer Gasonoo">
+</head>
+<body>
+  <header>
+    <h1>Ebenezer Gasonoo - WDD 230</h1>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Web Form</h2>
+    <form method="get" action="record.html" id="accountForm">
+      <label for="username">Username:
+        <input type="text" id="username" name="username" required />
+      </label>
+
+      <label for="password">Password:
+        <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}" title="Password must be at least 8 characters and alphanumeric" />
+      </label>
+
+      <label for="confirmPassword">Confirm Password:
+        <input type="password" id="confirmPassword" name="confirmPassword" required />
+      </label>
+
+      <label for="email">BYUI Email:
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@byui\.edu" title="Please enter a valid BYUI email address" />
+      </label>
+
+      <label for="rating">Rate this page:
+        <input type="range" id="rating" name="rating" min="1" max="10" step="1" />
+        <span id="ratingValue">5</span>
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ebenezer Gasonoo - WDD 230</p>
+  </footer>
+
+  <script src="./scripts/getdates.js" defer></script>
+</body>
+</html>
