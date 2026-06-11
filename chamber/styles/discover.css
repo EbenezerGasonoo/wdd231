@@ -1,0 +1,194 @@
+/* ====== DISCOVER PAGE — GRID TEMPLATE AREAS ====== */
+
+.discover-page {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  grid-template-areas:
+    "intro"
+    "sidebar"
+    "cards";
+}
+
+.discover-intro {
+  grid-area: intro;
+  background-color: var(--bg-light);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.discover-intro h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.discover-sidebar {
+  grid-area: sidebar;
+  background-color: var(--bg-light);
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+}
+
+.discover-sidebar h2 {
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  margin: 1rem 0 0.5rem;
+}
+
+.discover-sidebar h2:first-child {
+  margin-top: 0;
+}
+
+.discover-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.discover-sidebar li {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.visit-box {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  padding: 0.85rem;
+  margin-top: 0.75rem;
+  border-radius: 6px;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--primary-color);
+}
+
+.discover-cards {
+  grid-area: cards;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.attraction-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.attraction-card h2 {
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.attraction-card figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.attraction-card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+}
+
+.attraction-card address {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.attraction-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  flex-grow: 1;
+}
+
+.attraction-card .learn-more {
+  align-self: flex-start;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.1rem;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.attraction-card .learn-more:hover,
+.attraction-card .learn-more:focus-visible {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
+}
+
+/* Medium screens: 641px – 1024px */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .discover-page {
+    grid-template-areas:
+      "intro intro"
+      "sidebar sidebar"
+      "cards cards";
+  }
+
+  .discover-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card1 card2"
+      "card1 card1 card3"
+      "card4 card5 card6"
+      "card7 card8 card8";
+  }
+}
+
+/* Large screens: 1025px and above */
+@media screen and (min-width: 1025px) {
+  .discover-page {
+    grid-template-columns: 280px 1fr;
+    grid-template-areas:
+      "sidebar intro"
+      "sidebar cards";
+    align-items: start;
+  }
+
+  .discover-cards {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card3"
+      "card4 card5 card3 card3"
+      "card6 card7 card8 card8";
+  }
+}
+
+/* Image hover effect — not applied on mobile */
+@media (hover: hover) and (min-width: 641px) {
+  .attraction-card img:hover {
+    transform: scale(1.06);
+    filter: brightness(1.08) contrast(1.05);
+    box-shadow: 0 8px 20px rgba(0, 75, 135, 0.25);
+  }
+}
