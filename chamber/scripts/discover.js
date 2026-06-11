@@ -29,8 +29,7 @@ function displayVisitMessage() {
 
 function createAttractionCard(item, index) {
   const card = document.createElement('article');
-  card.className = 'attraction-card';
-  card.style.gridArea = `card${index + 1}`;
+  card.className = `attraction-card card${index + 1}`;
 
   const title = document.createElement('h2');
   title.textContent = item.name;

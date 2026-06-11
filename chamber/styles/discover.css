@@ -15,7 +15,7 @@
 .discover-intro {
   grid-area: intro;
   background-color: var(--bg-light);
-  padding: 1.25rem;
+  padding: 1.25rem 1.5rem;
   border-radius: 8px;
   border-left: 4px solid var(--accent-color);
 }
@@ -23,6 +23,11 @@
 .discover-intro h2 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+}
+
+.discover-intro p {
+  margin: 0;
+  max-width: 70ch;
 }
 
 .discover-sidebar {
@@ -33,14 +38,16 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 }
 
-.discover-sidebar h2 {
-  font-size: 1.15rem;
-  color: var(--primary-color);
-  margin: 1rem 0 0.5rem;
+.discover-sidebar section + section {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-light);
 }
 
-.discover-sidebar h2:first-child {
-  margin-top: 0;
+.discover-sidebar h2 {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin: 0 0 0.5rem;
 }
 
 .discover-sidebar ul {
@@ -50,25 +57,26 @@
 }
 
 .discover-sidebar li {
-  margin: 0.4rem 0;
-  font-size: 0.95rem;
+  margin: 0.35rem 0;
+  font-size: 0.92rem;
 }
 
 .visit-box {
   background: var(--white);
   border: 1px solid var(--border-light);
   padding: 0.85rem;
-  margin-top: 0.75rem;
+  margin: 0;
   border-radius: 6px;
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--primary-color);
 }
 
 .discover-cards {
   grid-area: cards;
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
   grid-template-areas:
     "card1"
     "card2"
@@ -89,10 +97,12 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-width: 0;
+  min-height: 100%;
 }
 
 .attraction-card h2 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--primary-color);
   margin: 0;
 }
@@ -101,11 +111,11 @@
   margin: 0;
   overflow: hidden;
   border-radius: 6px;
+  line-height: 0;
 }
 
 .attraction-card img {
   width: 100%;
-  max-width: 300px;
   height: 200px;
   object-fit: cover;
   display: block;
@@ -114,14 +124,14 @@
 
 .attraction-card address {
   font-style: normal;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--text-light);
   line-height: 1.5;
 }
 
 .attraction-card p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-dark);
   flex-grow: 1;
 }
@@ -131,10 +141,10 @@
   background-color: var(--primary-color);
   color: var(--white);
   border: none;
-  padding: 0.6rem 1.1rem;
+  padding: 0.55rem 1rem;
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -146,48 +156,65 @@
   transform: translateY(-1px);
 }
 
+/* Named grid areas for each card */
+.card1 { grid-area: card1; }
+.card2 { grid-area: card2; }
+.card3 { grid-area: card3; }
+.card4 { grid-area: card4; }
+.card5 { grid-area: card5; }
+.card6 { grid-area: card6; }
+.card7 { grid-area: card7; }
+.card8 { grid-area: card8; }
+
 /* Medium screens: 641px – 1024px */
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   .discover-page {
     grid-template-areas:
-      "intro intro"
-      "sidebar sidebar"
-      "cards cards";
+      "intro"
+      "sidebar"
+      "cards";
   }
 
   .discover-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "card1 card1 card2"
-      "card1 card1 card3"
-      "card4 card5 card6"
-      "card7 card8 card8";
+      "card1 card1"
+      "card2 card3"
+      "card4 card5"
+      "card6 card7"
+      "card8 card8";
   }
 }
 
 /* Large screens: 1025px and above */
 @media screen and (min-width: 1025px) {
   .discover-page {
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: minmax(260px, 300px) 1fr;
     grid-template-areas:
-      "sidebar intro"
+      "intro intro"
       "sidebar cards";
     align-items: start;
   }
 
+  .discover-sidebar {
+    position: sticky;
+    top: 1rem;
+  }
+
   .discover-cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "card1 card1 card2 card3"
-      "card4 card5 card3 card3"
-      "card6 card7 card8 card8";
+      "card1 card1 card2"
+      "card3 card4 card2"
+      "card5 card6 card7"
+      "card8 card8 card7";
   }
 }
 
 /* Image hover effect — not applied on mobile */
 @media (hover: hover) and (min-width: 641px) {
   .attraction-card img:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
     filter: brightness(1.08) contrast(1.05);
     box-shadow: 0 8px 20px rgba(0, 75, 135, 0.25);
   }
