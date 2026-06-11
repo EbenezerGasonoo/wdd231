@@ -1,0 +1,342 @@
+/* Tema Chamber of Commerce — Site Plan Styles */
+
+:root {
+  --primary: #004b87;
+  --secondary: #006bb3;
+  --accent: #f2c94c;
+  --background: #ffffff;
+  --text: #333333;
+  --muted-bg: #f4f7fa;
+  --wireframe-border: #006bb3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.7;
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--background);
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin: 0 0 0.35rem;
+  color: var(--background);
+}
+
+header p {
+  margin: 0;
+  font-weight: 300;
+  opacity: 0.92;
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--accent);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--secondary);
+  margin: 1.25rem 0 0.5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+.site-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.domain {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  background-color: var(--muted-bg);
+  border-left: 4px solid var(--accent);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.95rem;
+}
+
+.color-swatch-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.color-swatch-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--muted-bg);
+  border-radius: 8px;
+}
+
+.swatch {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.swatch-primary { background-color: var(--primary); }
+.swatch-secondary { background-color: var(--secondary); }
+.swatch-accent { background-color: var(--accent); }
+.swatch-background {
+  background-color: var(--background);
+  border: 2px solid #ccc;
+}
+.swatch-text { background-color: var(--text); }
+
+.typography-sample h3.sample-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-top: 0;
+}
+
+.typography-sample p.sample-body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.typography-sample p.sample-nav {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.wireframe-intro {
+  margin-bottom: 1.25rem;
+}
+
+.wireframe {
+  border: 2px dashed var(--wireframe-border);
+  border-radius: 8px;
+  background-color: var(--muted-bg);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.wireframe-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  margin: 0 0 0.75rem;
+}
+
+.wireframe-box {
+  background-color: #d9e4ef;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  color: var(--primary);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.65rem 0.5rem;
+}
+
+.wireframe-box.dark {
+  background-color: var(--primary);
+  color: var(--background);
+  border-color: var(--primary);
+}
+
+.wireframe-box.accent {
+  background-color: var(--accent);
+  border-color: #c9a832;
+  color: var(--text);
+}
+
+/* Desktop wireframe layout */
+.wireframe-desktop .wf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.wireframe-desktop .wf-logo {
+  flex: 0 0 28%;
+}
+
+.wireframe-desktop .wf-nav {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wireframe-desktop .wf-nav .wireframe-box {
+  flex: 1;
+}
+
+.wireframe-desktop .wf-hero {
+  margin-bottom: 0.75rem;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wireframe-desktop .wf-info-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.wireframe-desktop .wf-cta {
+  margin-bottom: 0.75rem;
+}
+
+.wireframe-desktop .wf-spotlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.wireframe-desktop .wf-footer {
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile wireframe layout */
+.wireframe-mobile {
+  max-width: 320px;
+  margin: 0 auto 1.5rem;
+}
+
+.wireframe-mobile .wf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.wireframe-mobile .wf-logo {
+  flex: 1;
+}
+
+.wireframe-mobile .wf-menu-btn {
+  flex: 0 0 3rem;
+}
+
+.wireframe-mobile .wf-nav-stack {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.wireframe-mobile .wf-hero {
+  margin-bottom: 0.75rem;
+  min-height: 4rem;
+}
+
+.wireframe-mobile .wf-info,
+.wireframe-mobile .wf-cta {
+  margin-bottom: 0.75rem;
+}
+
+.wireframe-mobile .wf-spotlights {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--background);
+  text-align: center;
+  padding: 1.25rem;
+  font-weight: 300;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+  }
+
+  .color-swatch-list li {
+    flex-direction: column;
+  }
+
+  .wireframe-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .wireframe-mobile-only-label {
+    display: none;
+  }
+}
