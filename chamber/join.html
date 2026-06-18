@@ -9,15 +9,16 @@
   <meta name="author" content="Ebenezer Gasonoo">
   <meta name="keywords"
     content="Tema Chamber, Business Networking, Ghana Business, Economic Development, Chamber of Commerce">
-  <title>Tema Chamber of Commerce</title>
+  <title>Join the Chamber — Tema Chamber of Commerce</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/join.css">
   <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
-  <meta property="og:title" content="Tema Chamber of Commerce">
+  <meta property="og:title" content="Join the Chamber — Tema Chamber of Commerce">
   <meta property="og:description"
     content="Become a Tema Chamber member to gain mentoring, spotlights, and events designed to accelerate your business growth across the metropolitan area.">
   <meta property="og:type" content="website">
@@ -39,37 +40,43 @@
     </nav>
   </header>
 
-  <main class="form-grid">
-    <section>
+  <main class="join-layout form-grid">
+    <section class="join-form-section">
       <h2>Join the Chamber</h2>
       <form method="get" action="thankyou.html">
-        <label>First Name:
-          <input type="text" name="firstName" id="firstName" required>
+        <label for="firstName">First Name:
+          <input type="text" name="firstName" id="firstName" required autocomplete="given-name"
+            title="Enter your first name">
         </label>
 
-        <label>Last Name:
-          <input type="text" name="lastName" id="lastName" required>
+        <label for="lastName">Last Name:
+          <input type="text" name="lastName" id="lastName" required autocomplete="family-name"
+            title="Enter your last name">
         </label>
 
-        <label>Title/Position:
-          <input type="text" name="position" id="position" pattern="[A-Za-z\s-]{7,}"
-            title="Minimum 7 alphabetic characters, hyphens, or spaces">
+        <label for="position">Title/Position:
+          <input type="text" name="position" id="position" autocomplete="organization-title"
+            pattern="[A-Za-z\s-]{7,}"
+            title="Minimum 7 alphabetic characters, hyphens, or spaces only">
         </label>
 
-        <label>Email:
-          <input type="email" name="email" id="email" required placeholder="example@email.com">
+        <label for="email">Email:
+          <input type="email" name="email" id="email" required autocomplete="email" placeholder="example@email.com"
+            title="Enter a valid email address">
         </label>
 
-        <label>Mobile Phone:
-          <input type="tel" name="phone" id="phone" required>
+        <label for="phone">Mobile Phone:
+          <input type="tel" name="phone" id="phone" required autocomplete="tel"
+            title="Enter your mobile phone number">
         </label>
 
-        <label>Organization Name:
-          <input type="text" name="orgName" id="orgName" required>
+        <label for="orgName">Organization Name:
+          <input type="text" name="orgName" id="orgName" required autocomplete="organization"
+            title="Enter your business or organization name">
         </label>
 
-        <label>Membership Level:
-          <select name="membership" id="membership">
+        <label for="membership">Membership Level:
+          <select name="membership" id="membership" title="Select a membership level">
             <option value="np">NP Membership (Free)</option>
             <option value="bronze">Bronze Membership</option>
             <option value="silver">Silver Membership</option>
@@ -77,37 +84,112 @@
           </select>
         </label>
 
-        <label>Description:
-          <textarea name="description" id="description"></textarea>
+        <label for="description">Description:
+          <textarea name="description" id="description" title="Describe your business or organization"></textarea>
         </label>
 
         <input type="hidden" name="timestamp" id="timestamp">
 
-        <input type="submit" value="Join Our Chamber">
+        <input type="submit" value="Join Our Chamber" title="Submit membership application">
       </form>
     </section>
 
-    <aside>
-      <h3>Membership Benefits</h3>
-      <ul>
-        <li><strong>NP Membership:</strong> Free listing and access to basic events.</li>
-        <li><strong>Bronze:</strong> Event invitations, training access.</li>
-        <li><strong>Silver:</strong> Spotlight features, discounts, training.</li>
-        <li><strong>Gold:</strong> Premium advertising, VIP events, all benefits.</li>
-      </ul>
+    <aside class="membership-cards" aria-label="Membership level options">
+      <article class="membership-card">
+        <h3>NP Membership</h3>
+        <p class="level-price">Free — Non-Profit</p>
+        <p>Ideal for registered non-profit organizations serving the Tema community.</p>
+        <a href="#" data-dialog="dialog-np">View NP Benefits</a>
+      </article>
+
+      <article class="membership-card">
+        <h3>Bronze Membership</h3>
+        <p class="level-price">GHS 250 / year</p>
+        <p>Entry-level business membership with events and training access.</p>
+        <a href="#" data-dialog="dialog-bronze">View Bronze Benefits</a>
+      </article>
+
+      <article class="membership-card">
+        <h3>Silver Membership</h3>
+        <p class="level-price">GHS 500 / year</p>
+        <p>Enhanced visibility with spotlight features and event discounts.</p>
+        <a href="#" data-dialog="dialog-silver">View Silver Benefits</a>
+      </article>
+
+      <article class="membership-card">
+        <h3>Gold Membership</h3>
+        <p class="level-price">GHS 900 / year</p>
+        <p>Premium benefits including homepage advertising and VIP networking.</p>
+        <a href="#" data-dialog="dialog-gold">View Gold Benefits</a>
+      </article>
     </aside>
   </main>
+
+  <dialog id="dialog-np" class="membership-dialog" aria-labelledby="np-title">
+    <button type="button" class="dialog-close" aria-label="Close NP membership dialog">×</button>
+    <h2 id="np-title">NP Membership Benefits</h2>
+    <p>Designed for non-profit organizations with no membership fee.</p>
+    <ul>
+      <li>Free directory listing on the chamber website</li>
+      <li>Access to community networking breakfasts</li>
+      <li>Invitations to public chamber workshops</li>
+      <li>Quarterly nonprofit resource newsletter</li>
+    </ul>
+    <p><strong>Annual Cost:</strong> Free</p>
+  </dialog>
+
+  <dialog id="dialog-bronze" class="membership-dialog" aria-labelledby="bronze-title">
+    <button type="button" class="dialog-close" aria-label="Close Bronze membership dialog">×</button>
+    <h2 id="bronze-title">Bronze Membership Benefits</h2>
+    <p>Perfect for small businesses beginning their chamber journey.</p>
+    <ul>
+      <li>All NP benefits included</li>
+      <li>Invitations to monthly business mixers</li>
+      <li>Access to online training webinars</li>
+      <li>Member-to-member discount program</li>
+    </ul>
+    <p><strong>Annual Cost:</strong> GHS 250</p>
+  </dialog>
+
+  <dialog id="dialog-silver" class="membership-dialog" aria-labelledby="silver-title">
+    <button type="button" class="dialog-close" aria-label="Close Silver membership dialog">×</button>
+    <h2 id="silver-title">Silver Membership Benefits</h2>
+    <p>Grow your visibility with enhanced marketing opportunities.</p>
+    <ul>
+      <li>All Bronze benefits included</li>
+      <li>Homepage business spotlight rotation</li>
+      <li>20% discount on chamber event tickets</li>
+      <li>Priority registration for trade fairs</li>
+      <li>Featured listing in the member directory</li>
+    </ul>
+    <p><strong>Annual Cost:</strong> GHS 500</p>
+  </dialog>
+
+  <dialog id="dialog-gold" class="membership-dialog" aria-labelledby="gold-title">
+    <button type="button" class="dialog-close" aria-label="Close Gold membership dialog">×</button>
+    <h2 id="gold-title">Gold Membership Benefits</h2>
+    <p>Maximum exposure and exclusive access for established businesses.</p>
+    <ul>
+      <li>All Silver benefits included</li>
+      <li>Premium homepage banner advertising</li>
+      <li>VIP seating at the Annual Chamber Dinner</li>
+      <li>One-on-one mentoring with chamber leadership</li>
+      <li>Exclusive export and trade development workshops</li>
+    </ul>
+    <p><strong>Annual Cost:</strong> GHS 900</p>
+  </dialog>
 
   <footer>
     <p>📍 Community House, Industrial Area, Tema</p>
     <p>📧 Email: info@temachamber.com | ☎️ +233 30 123 4567</p>
     <p>&copy; <span id="year"></span> Tema Chamber</p>
     <p>Developed by Ebenezer Gasonoo</p>
-    <p>WDD 230: Web Frontend Development Project</p>
+    <p>WDD 231: Web Frontend Development Project</p>
     <p>Last Updated: <span id="lastModified"></span></p>
   </footer>
 
   <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/join.js" defer></script>
 </body>
 
 </html>

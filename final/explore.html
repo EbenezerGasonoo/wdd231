@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Tema — Tema Coastal Guide</title>
+  <meta name="description"
+    content="Browse 18 beaches, markets, landmarks, and cultural sites in Tema with ratings, hours, and costs for every destination.">
+  <meta name="author" content="Ebenezer Gasonoo">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+  <meta property="og:title" content="Explore Tema — Tema Coastal Guide">
+  <meta property="og:description" content="Filter and discover 18 destinations across Tema's coast, culture, and markets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ebenezergasonoo.github.io/wdd231/final/explore.html">
+  <meta property="og:image" content="https://ebenezergasonoo.github.io/wdd231/final/images/hero.webp">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/favicon.ico" alt="Tema Coastal Guide logo" width="40" height="40">
+      <h1>Tema Coastal Guide</h1>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html" aria-current="page">Explore</a></li>
+        <li><a href="plan.html">Plan Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro-panel">
+      <h2>Explore Destinations</h2>
+      <p>Search and filter 18 places across Tema. Select a category, open details in the modal, or save favorites to
+        your browser.</p>
+    </section>
+
+    <p id="favorites-count" class="favorites-bar">Saved favorites: 0</p>
+
+    <label for="search-input" class="visually-hidden">Search destinations</label>
+    <input type="search" id="search-input" placeholder="Search by name, address, or description..."
+      aria-label="Search destinations">
+
+    <div class="filters" role="group" aria-label="Filter by category">
+      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-filter="beach" aria-pressed="false">Beaches</button>
+      <button type="button" class="filter-btn" data-filter="market" aria-pressed="false">Markets</button>
+      <button type="button" class="filter-btn" data-filter="culture" aria-pressed="false">Culture</button>
+      <button type="button" class="filter-btn" data-filter="landmark" aria-pressed="false">Landmarks</button>
+      <button type="button" class="filter-btn" data-filter="food" aria-pressed="false">Food</button>
+      <button type="button" class="filter-btn" data-filter="nature" aria-pressed="false">Nature</button>
+      <button type="button" class="filter-btn" data-filter="tour" aria-pressed="false">Tours</button>
+      <button type="button" class="filter-btn" data-filter="sports" aria-pressed="false">Sports</button>
+      <button type="button" class="filter-btn" data-filter="park" aria-pressed="false">Parks</button>
+    </div>
+
+    <section id="places-grid" class="places-grid" aria-label="Destination cards" aria-live="polite"></section>
+  </main>
+
+  <div id="place-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+    aria-hidden="true">
+    <div class="modal">
+      <button type="button" id="modal-close" class="modal-close" aria-label="Close dialog">×</button>
+      <img id="modal-image" src="images/hero.webp" alt="Destination photo" width="400" height="200">
+      <h2 id="modal-title"></h2>
+      <p id="modal-category"></p>
+      <p id="modal-address"></p>
+      <p id="modal-description"></p>
+      <p id="modal-rating"></p>
+      <p id="modal-hours"></p>
+      <p id="modal-cost"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>📍 Tema, Greater Accra Region, Ghana</p>
+    <p><a href="https://youtu.be/REPLACE_WITH_YOUR_VIDEO" target="_blank" rel="noopener noreferrer">Project Video
+        Demonstration</a></p>
+    <p>&copy; <span id="year"></span> Ebenezer Gasonoo · WDD 231 Final Project</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/explore.js" type="module"></script>
+</body>
+
+</html>

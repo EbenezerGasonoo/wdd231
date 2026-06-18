@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema Coastal Guide — Home</title>
+  <meta name="description"
+    content="Plan your visit to Tema, Ghana with curated beaches, markets, cultural sites, and coastal experiences for travelers and families.">
+  <meta name="author" content="Ebenezer Gasonoo">
+  <meta name="keywords" content="Tema Ghana, coastal travel, Ghana tourism, Tema beaches, port city guide">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+  <meta property="og:title" content="Tema Coastal Guide">
+  <meta property="og:description"
+    content="Discover beaches, markets, and cultural landmarks in Tema, Ghana's vibrant port city on the Gulf of Guinea.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ebenezergasonoo.github.io/wdd231/final/">
+  <meta property="og:image" content="https://ebenezergasonoo.github.io/wdd231/final/images/hero.webp">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/favicon.ico" alt="Tema Coastal Guide logo" width="40" height="40">
+      <h1>Tema Coastal Guide</h1>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="plan.html">Plan Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <figure>
+        <img src="images/hero.webp" alt="Coastal view of Tema, Ghana at sunset" width="960" height="420"
+          loading="eager" decoding="async">
+        <figcaption>Welcome to Tema — Ghana's gateway to the Atlantic coast.</figcaption>
+      </figure>
+    </section>
+
+    <section class="intro-panel">
+      <h2>Your Guide to Coastal Ghana</h2>
+      <p>Tema Coastal Guide helps visitors discover beaches, markets, harbor tours, and cultural experiences across one
+        of West Africa's most important port cities. Whether you are planning a weekend escape or researching your
+        first trip to Ghana, start here.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="explore.html">Browse 18 Destinations</a>
+        <a class="btn btn-secondary" href="plan.html">Plan Your Trip</a>
+      </div>
+    </section>
+
+    <section class="weather-card" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Current Weather in Tema</h2>
+      <div id="weather-data">Loading weather...</div>
+    </section>
+
+    <section class="info-panel" aria-labelledby="favorites-heading">
+      <h2 id="favorites-heading">Your Saved Places</h2>
+      <p id="favorites-count">Saved favorites: 0</p>
+      <p>Save destinations on the Explore page and your selections will persist in this browser using local storage.</p>
+    </section>
+
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Top-Rated Destinations</h2>
+      <div id="featured-places" class="featured-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>📍 Tema, Greater Accra Region, Ghana</p>
+    <p><a href="attributions.html">Attributions</a> · <a href="https://youtu.be/REPLACE_WITH_YOUR_VIDEO"
+        target="_blank" rel="noopener noreferrer">Project Video Demonstration</a></p>
+    <p>&copy; <span id="year"></span> Ebenezer Gasonoo · WDD 231 Final Project</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/home.js" type="module"></script>
+</body>
+
+</html>

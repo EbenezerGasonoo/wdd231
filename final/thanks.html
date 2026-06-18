@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Plan Confirmation — Tema Coastal Guide</title>
+  <meta name="description" content="Confirmation page displaying your submitted Tema Coastal Guide trip plan details.">
+  <meta name="author" content="Ebenezer Gasonoo">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/favicon.ico" alt="Tema Coastal Guide logo" width="40" height="40">
+      <h1>Tema Coastal Guide</h1>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="plan.html">Plan Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="submission-summary" class="submission-summary" aria-live="polite"></section>
+    <p><a class="btn btn-primary" href="index.html">Return Home</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Ebenezer Gasonoo · WDD 231 Final Project</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/thanks.js" type="module"></script>
+</body>
+
+</html>

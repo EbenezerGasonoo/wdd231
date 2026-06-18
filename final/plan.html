@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Visit — Tema Coastal Guide</title>
+  <meta name="description"
+    content="Submit a trip plan for your visit to Tema with travel dates, group size, interests, and special requests.">
+  <meta name="author" content="Ebenezer Gasonoo">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+  <meta property="og:title" content="Plan Your Visit — Tema Coastal Guide">
+  <meta property="og:description" content="Tell us about your Tema trip and receive a personalized planning summary.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ebenezergasonoo.github.io/wdd231/final/plan.html">
+  <meta property="og:image" content="https://ebenezergasonoo.github.io/wdd231/final/images/hero.webp">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/favicon.ico" alt="Tema Coastal Guide logo" width="40" height="40">
+      <h1>Tema Coastal Guide</h1>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="plan.html" aria-current="page">Plan Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-layout">
+    <section>
+      <h2>Plan Your Tema Visit</h2>
+      <p>Complete the form below and review your trip details on the confirmation page.</p>
+
+      <form id="trip-form" method="get" action="thanks.html">
+        <label for="fullName">Full Name
+          <input type="text" id="fullName" name="fullName" required autocomplete="name">
+        </label>
+
+        <label for="email">Email Address
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        </label>
+
+        <label for="visit-date">Preferred Visit Date
+          <input type="date" id="visit-date" name="visitDate" required>
+        </label>
+
+        <label for="group-size">Group Size
+          <select id="group-size" name="groupSize" required>
+            <option value="">Select group size</option>
+            <option value="1">Solo traveler</option>
+            <option value="2">2 people</option>
+            <option value="3-5">3–5 people</option>
+            <option value="6+">6 or more</option>
+          </select>
+        </label>
+
+        <label for="experience">Travel Experience
+          <select id="experience" name="experience" required>
+            <option value="">Select experience level</option>
+            <option value="first-time">First visit to Ghana</option>
+            <option value="returning">Returning visitor</option>
+            <option value="local">Ghana resident</option>
+          </select>
+        </label>
+
+        <fieldset>
+          <legend>Interests (select all that apply)</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="interests" value="beaches"> Beaches</label>
+            <label><input type="checkbox" name="interests" value="food"> Local food</label>
+            <label><input type="checkbox" name="interests" value="culture"> Culture &amp; festivals</label>
+            <label><input type="checkbox" name="interests" value="markets"> Markets &amp; shopping</label>
+            <label><input type="checkbox" name="interests" value="nature"> Nature &amp; wildlife</label>
+          </div>
+        </fieldset>
+
+        <label for="comments">Special Requests
+          <textarea id="comments" name="comments"
+            placeholder="Tell us about accessibility needs, dietary preferences, or must-see places."></textarea>
+        </label>
+
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <button type="submit" class="btn btn-primary">Submit Trip Plan</button>
+      </form>
+    </section>
+
+    <aside class="info-panel">
+      <h2>Planning Tips</h2>
+      <ul>
+        <li>Visit beaches early morning or late afternoon for cooler temperatures.</li>
+        <li>Markets are busiest on weekends — arrive before 10 AM.</li>
+        <li>Carry cash for small vendors; cards are not accepted everywhere.</li>
+        <li>Save favorites on the Explore page before submitting your plan.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>📍 Tema, Greater Accra Region, Ghana</p>
+    <p><a href="https://youtu.be/REPLACE_WITH_YOUR_VIDEO" target="_blank" rel="noopener noreferrer">Project Video
+        Demonstration</a></p>
+    <p>&copy; <span id="year"></span> Ebenezer Gasonoo · WDD 231 Final Project</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/plan.js" type="module"></script>
+</body>
+
+</html>

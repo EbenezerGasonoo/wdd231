@@ -1,0 +1,202 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Sakumono Beach",
+      "category": "beach",
+      "address": "Sakumono Beach Road, Tema, Ghana",
+      "description": "Golden shoreline popular with families, swimmers, and photographers looking for calm Atlantic views near the city.",
+      "image": "places/sakumono-beach.webp",
+      "rating": 4.6,
+      "hours": "Daily 6:00 AM – 7:00 PM",
+      "cost": "Free entry"
+    },
+    {
+      "id": 2,
+      "name": "Tema Harbor",
+      "category": "landmark",
+      "address": "Harbor Road, Tema Port, Greater Accra",
+      "description": "Ghana's busiest seaport offers guided tours explaining container logistics, fishing fleets, and regional trade routes.",
+      "image": "places/tema-harbor.webp",
+      "rating": 4.8,
+      "hours": "Mon–Sat 8:00 AM – 5:00 PM",
+      "cost": "Guided tour from GHS 40"
+    },
+    {
+      "id": 3,
+      "name": "Community 1 Market",
+      "category": "market",
+      "address": "Market Road, Community 1, Tema",
+      "description": "A vibrant open-air market selling fresh produce, spices, textiles, and handmade goods from local vendors.",
+      "image": "places/community-market.webp",
+      "rating": 4.4,
+      "hours": "Daily 5:00 AM – 8:00 PM",
+      "cost": "Free entry"
+    },
+    {
+      "id": 4,
+      "name": "Meridian Park",
+      "category": "park",
+      "address": "Meridian Road, Community 25, Tema",
+      "description": "Shaded lawns, playgrounds, and walking paths make this park a favorite weekend gathering spot for residents.",
+      "image": "places/meridian-park.webp",
+      "rating": 4.3,
+      "hours": "Daily 6:00 AM – 9:00 PM",
+      "cost": "Free entry"
+    },
+    {
+      "id": 5,
+      "name": "Tema Roundabout",
+      "category": "landmark",
+      "address": "Community 1 Roundabout, Tema",
+      "description": "The city's iconic central junction features public art celebrating Tema's maritime heritage and planned urban design.",
+      "image": "places/tema-roundabout.webp",
+      "rating": 4.1,
+      "hours": "Open 24 hours",
+      "cost": "Free"
+    },
+    {
+      "id": 6,
+      "name": "Tema Cultural Centre",
+      "category": "culture",
+      "address": "Community Centre Road, Tema",
+      "description": "Hosts drumming workshops, dance performances, and seasonal festivals that showcase Ga traditions and coastal culture.",
+      "image": "places/cultural-centre.webp",
+      "rating": 4.7,
+      "hours": "Tue–Sun 10:00 AM – 6:00 PM",
+      "cost": "Events from GHS 15"
+    },
+    {
+      "id": 7,
+      "name": "Kpone Fishing Village",
+      "category": "culture",
+      "address": "Kpone Coastal Road, near Tema",
+      "description": "Watch fishermen haul nets at dawn and sample grilled tilapia served steps from the boats that caught it.",
+      "image": "places/fishing-village.webp",
+      "rating": 4.5,
+      "hours": "Best at 5:00 – 9:00 AM",
+      "cost": "Meals from GHS 25"
+    },
+    {
+      "id": 8,
+      "name": "Industrial Heritage Tour",
+      "category": "tour",
+      "address": "Industrial Area, Tema",
+      "description": "Learn how Tema's manufacturing zone produces goods for export and supports thousands of local jobs.",
+      "image": "places/industrial-tour.webp",
+      "rating": 4.0,
+      "hours": "Wed & Fri 9:00 AM – 2:00 PM",
+      "cost": "Tour GHS 60"
+    },
+    {
+      "id": 9,
+      "name": "Tema Sports Stadium",
+      "category": "sports",
+      "address": "Sports Stadium Road, Tema",
+      "description": "Catch regional football matches and community athletics events in this open-air stadium near the city center.",
+      "image": "places/sports-stadium.webp",
+      "rating": 4.2,
+      "hours": "Event days only",
+      "cost": "Tickets from GHS 10"
+    },
+    {
+      "id": 10,
+      "name": "Waterfront Promenade",
+      "category": "beach",
+      "address": "Coastal Drive, Tema",
+      "description": "A paved walkway along the shore ideal for evening strolls, jogging, and watching ships enter the harbor.",
+      "image": "places/waterfront-promenade.webp",
+      "rating": 4.4,
+      "hours": "Daily 5:00 AM – 10:00 PM",
+      "cost": "Free entry"
+    },
+    {
+      "id": 11,
+      "name": "Chop Bar Alley",
+      "category": "food",
+      "address": "Harbour Area, Tema",
+      "description": "Sample jollof rice, grilled fish, and kelewele from family-run eateries loved by port workers and visitors alike.",
+      "image": "places/local-eatery.webp",
+      "rating": 4.9,
+      "hours": "Daily 11:00 AM – 10:00 PM",
+      "cost": "Meals from GHS 20"
+    },
+    {
+      "id": 12,
+      "name": "Tema Craft Village",
+      "category": "market",
+      "address": "Community 4, Tema",
+      "description": "Artisans sell beads, kente cloth, wood carvings, and souvenirs crafted in workshops behind their stalls.",
+      "image": "places/craft-village.webp",
+      "rating": 4.3,
+      "hours": "Mon–Sat 9:00 AM – 6:00 PM",
+      "cost": "Free entry"
+    },
+    {
+      "id": 13,
+      "name": "Coastal Bird Sanctuary",
+      "category": "nature",
+      "address": "Sakumono Lagoon, Tema",
+      "description": "Migratory birds rest along the lagoon trails where guided walks explain wetland ecology and conservation efforts.",
+      "image": "places/bird-sanctuary.webp",
+      "rating": 4.6,
+      "hours": "Sat–Sun 7:00 AM – 4:00 PM",
+      "cost": "Entry GHS 12"
+    },
+    {
+      "id": 14,
+      "name": "Harbor Night Market",
+      "category": "market",
+      "address": "Harbor Road, Tema",
+      "description": "After sunset the waterfront fills with food stalls, live music, and vendors selling crafts under string lights.",
+      "image": "places/night-market.webp",
+      "rating": 4.5,
+      "hours": "Fri–Sun 6:00 PM – 11:00 PM",
+      "cost": "Free entry"
+    },
+    {
+      "id": 15,
+      "name": "Tema Public Library",
+      "category": "culture",
+      "address": "Community 2, Tema",
+      "description": "A quiet stop for travelers researching local history with archives on Tema's founding and port development.",
+      "image": "places/community-library.webp",
+      "rating": 4.0,
+      "hours": "Mon–Fri 8:00 AM – 5:00 PM",
+      "cost": "Free entry"
+    },
+    {
+      "id": 16,
+      "name": "Traditional Canoe Launch",
+      "category": "culture",
+      "address": "Sakumono Shore, Tema",
+      "description": "Colorful wooden canoes depart at sunrise as crews paddle beyond the breakers to cast nets in the open sea.",
+      "image": "places/canoe-launch.webp",
+      "rating": 4.4,
+      "hours": "Daily 4:30 – 8:00 AM",
+      "cost": "Free to observe"
+    },
+    {
+      "id": 17,
+      "name": "Colonial Heritage Walk",
+      "category": "tour",
+      "address": "Community 1, Tema",
+      "description": "A self-guided route past early township planning sites that shaped one of West Africa's first modern port cities.",
+      "image": "places/heritage-walk.webp",
+      "rating": 4.2,
+      "hours": "Anytime during daylight",
+      "cost": "Free"
+    },
+    {
+      "id": 18,
+      "name": "Atlantic Sunset Point",
+      "category": "beach",
+      "address": "East Coast Road, Tema",
+      "description": "The best west-facing viewpoint for dramatic sunsets over the Gulf of Guinea with unobstructed ocean horizons.",
+      "image": "places/sunset-point.webp",
+      "rating": 4.8,
+      "hours": "Daily 4:00 – 7:00 PM",
+      "cost": "Free entry"
+    }
+  ]
+}
